@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel="stylesheet" href="stylesheets/blood_pressure.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script src="javascripts/blood-pressure.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Pressure Calculator</title>
+  <meta property="og:title" content="Blood Pressure Calculator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.blood-pressure-calculator.minlingzhao.com/" />
+  <meta property="og:image" content="http://www.blood-pressure-calculator.minlingzhao.com/images/homepage.png" />
+</head>
+<body>
+  <div class="container">
+    <div id="result-box">
+      <div id="result">
+      </div>
+      <svg version="1.1" id="ekg_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      viewBox="-466.4 259.6 280.2 47.3" enable-background="new -466.4 259.6 280.2 47.3" xml:space="preserve">
+      <polyline fill="none" stroke="#4289A3" class="ekg" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points="-465.4,281 
+      -436,281 -435.3,280.6 -431.5,275.2 -426.9,281 -418.9,281 -423.9,281 -363.2,281 -355.2,269 -345.2,303 -335.2,263 -325.2,291 
+      -319.2,281 -187.2,281 "/>
+    </svg>
+
+  </div>
+
+  <form action="#" id="blood-pressure-form">
+    <div class="blood-pressure-monitor">
+      <div class="dot-collection">
+        <span class="dot light-blue"></span>
+        <span class="dot blue"></span>
+        <span class="dot dark-blue"></span>
+        <input type="button" class="submit" onclick="calculateBloodPressureResult()" value="Submit">
+      </div>
+      <div class="systolic-and-diastolic">
+        <div class="systolic">
+          <div class="pressure-title">
+            Систолично: 
+          </div>
+          <div>
+            <input type="text" name="systolic" class="input"> mmHg
+          </div>
+        </div>
+        <div class="diastolic">
+          <div class="pressure-title">
+            Диастолично:
+          </div>
+          <div>
+            <input type="text" name="diastolic" class="input"> mmHg
+          </div>
+        </div>
+      </div>
+    </div> 
+  </form>
+</div>
+</body>
+</html>

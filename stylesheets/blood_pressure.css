@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: powderblue;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  background-image: url("../images/crema-hand-md.png");
+  height: 800px;
+  background-repeat: no-repeat;  
+  background-position: center;
+  background-size: contain;
+}
+
+.blood-pressure-monitor {
+  width: 80%;
+  max-width: 500px;
+  margin-top: 15%;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  border: 10px solid #e6e6e6;
+  padding: 35px 45px 0px 20px;
+  background-color: white;
+}
+
+.dot-collection {
+  margin: auto;
+  display: inline-block;
+  width: 15%;
+}
+
+.systolic-and-diastolic {
+  border-radius: 25px;
+  background-color: #bce3ff;
+  transform: translate(5%, -18%);
+  display: inline-block;
+  border: 7px solid #4f6d9a;
+  padding-left: 35px;
+  width: 80%;
+}
+
+.pressure-title {
+  padding: 5px;
+}
+
+.input {
+  width: 50%;
+  padding: 6px;
+  border-radius: 6px;
+  margin: 2px;
+  font-size: 20px;
+}
+
+.light-blue{
+  background-color: #6ccdec;
+}
+
+.blue {
+  background-color: #217fe2;
+}
+
+.dark-blue {
+  background-color: #0d0db7;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  margin-bottom: 33px;
+}
+
+.systolic {
+  height: 100px;
+}
+
+.diastolic {
+  height: 100px;
+}
+
+#result-box {
+  width: 80%;
+  max-width: 500px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  padding: 20px 20px 40px 20px;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  border: 10px solid #e6e6e6;
+  background-color: lightyellow;
+}
+
+.blood-pressure-result {
+  display: -webkit-inline-box;
+}
+
+.blood-pressure-number {
+  margin-left: 25px;
+  color: white;
+  padding: 0px 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .blood-pressure-monitor {
+    width: 95%;
+  }
+
+  .dot-collection {
+    width: 23%;
+  }
+
+  .systolic-and-diastolic {
+    width: 75%;
+  }
+
+  .blood-pressure-result {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .blood-pressure-number {
+    margin-left: 0;
+    padding: 0px 12px;
+  }
+
+  #result-box {
+    height: 16%;
+    top: 25%;
+    padding: 20px 20px 70px 20px;
+  }
+}
+
+.warning {
+  color: red;
+}
+
+.submit {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+img#hand {
+  height: 1500px;
+  max-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -1200;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+}
+svg {
+  margin: 0 -1rem;
+}
+
+.ekg {
+  opacity: 1;
+  stroke-dasharray: 600;
+  animation: dash 1.5s linear forwards infinite,fade 1.5s linear infinite;
+}
